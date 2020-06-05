@@ -1,0 +1,2 @@
+uchr1	10	20	break1
+chr1	55	58	break2
