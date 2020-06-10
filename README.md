@@ -12,23 +12,28 @@ unzip CAM.1.2.linux.x86_64.zip   # use linux version as example
 
 cd CAM.1.2.linux.x86_64    # find your CAM.1.1.linux.x86_64 folder and change working directory to it
 ```
+
 for the root user
 ```
 sudo python setup.py install
 ```
+
 if you are not a root user, you can install CAM at specific locations which you have write permission
 ```
 python setup.py install --prefix /home/CAM    # here you can replace “/home/CAM" with any location you want
 export PATH=/home/CAM/bin:$PATH    # setup PATH, so that system knows where to find executable files
 export PYTHONPATH=/home/CAM/lib/python2.7/site-packages:$PYTHONPATH    # setup PYTHONPATH, so that CAM knows where to import modules
 ```
+
 Type:
 ```
 CAM.py --help
 ```
+
 If you see help manual, you have successfully installed CAM.
 
 #STEP2.Prepare the annotation
+
 Obtain a genome sequence file (e.g., hg19.2bit or hg19.fa) according to the species of your sample.
 CAM supports human (hg38 and hg19) and mouse (mm10 and mm9) genome versions
 
@@ -49,10 +54,10 @@ Below is an example command for CAM:
 CAM.py simple -a GSM907784_1.fastq -b GSM907784_2.fastq -n GSM907784 -t PE -s hg19 --fa /home/data/hg19.fa -c /home/data/CTCF_motif_hg19.bed
 ```
 
-#Output and testing data
+#Step4.Output and testing data
 
 After you finish CAM, find your result in the outname/summary/ folder.
 
-##More details are available: [Link](https://zhanglab.tongji.edu.cn/softwares/CAM/index.html)
+#More details are available: [Link](https://zhanglab.tongji.edu.cn/softwares/CAM/index.html)
 
 
